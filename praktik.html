@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Tampil(e){
+            if(e == 0){
+                return;
+            }
+            console.log(e);
+            Tampil(e - 1);
+        }
+        const Variable = prompt('Masukan Pengulangan : ');
+        if(Variable >= 10){
+            alert('HappyCoding!');
+        }else{
+            alert('Naon?');
+        }
+        Tampil(Variable);
+    </script>
+</body>
+</html>

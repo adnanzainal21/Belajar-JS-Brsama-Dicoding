@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <em>Rekapitulasi Data Raport SMK WIKRAMA BOGOR</em><br>
+    <table>
+    <tr>
+        <td>Bahasa Inggris : </td>
+        <td><input type="text" id="tex1"></td>
+    </tr>
+    <tr>
+        <td>Matematika : </td>
+        <td><input type="text" id="tex2"></td>
+    </tr>
+     <tr>
+        <td>Bahasa Indonesia : </td>
+         <td><input type="text" id="tex3"></td>
+     </tr>
+    </table>
+    <input type="submit" value="check" onclick="hasil()">
+    <script>
+        function hasil(){
+            var satu = document.getElementById('tex1');
+            var dua = document.getElementById('tex2');
+            var tiga = document.getElementById('tex3');
+            var total = satu.value + dua.value + tiga.value / 3;
+            if(total.value <= 75){
+                alert('Maaf Anda Tidak Lulus');
+            }else{
+                alert('selamat anda lulus!');
+            }
+        }
+    </script>
+</body>
+</html>

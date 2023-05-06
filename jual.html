@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="menu">
+        <option>Nasi</option>
+        <option>Ayam</option>
+        <option>Minuman</option>
+    </select>
+    
+    <input type="submit" value="CEK HARGA" onclick="ngeb()">
+    <input type="text" id="harga1">
+    <script>
+        function ngeb(){
+        var menu = document.getElementById('menu');
+        var harga1 = parseInt(document.getElementById('harga1')).value;
+        switch ( menu ) {
+            case 'Nasi':
+                harga1.value = 2000;
+                break;
+
+            case 'Ayam':
+                harga1.value = 5000;
+                break;
+
+            case 'Minuman':
+                 harga1.value = 7000;
+                break;
+        
+            default:
+                break;
+        }
+    }
+    </script>
+</body>
+</html>

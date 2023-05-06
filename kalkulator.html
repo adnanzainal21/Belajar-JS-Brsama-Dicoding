@@ -1,0 +1,83 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KalkulatorJs</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="text" id="angkaSatu"></td>
+            <td>
+                <select  id="op">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>/</option>
+                    <option>x</option>
+                    <option>Mod</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="angkaDua"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="hasil"></td>
+        </tr>
+    </table>
+    <script>
+        const result = document.querySelector('#angkaDua');
+        result.addEventListener('keyup', () => {
+            //variable angka satu
+            let angkaSatu = parseInt(document.getElementById('angkaSatu').value);
+            //letiable angka dua
+            let angkaDua = parseInt(document.getElementById('angkaDua').value);
+            //letiable operasi aritmatik
+            let op = document.getElementById('op').value;
+            //letiable angka hasil
+            let hasil = document.getElementById('hasil');
+            //letiable untuk total angka satu dan angka dua
+            let total;
+            if (isNaN(angkaSatu) || isNaN(angkaDua)) {
+                alert('isi form dengan angka!')
+            } else {
+                switch (op) {
+                    case '+':
+                        total = angkaSatu + angkaDua;
+                        break;
+
+                    case '-':
+                        total = angkaSatu - angkaDua;
+                        break;
+
+                    case 'x':
+                        total = angkaSatu * angkaDua;
+                        break;
+
+                    case '/':
+                        total = angkaSatu / angkaDua;
+                        break;
+
+                    case 'Mod':
+                        total = angkaSatu % angkaDua;
+                        break;
+
+                    default:
+                        alert('Operator Tidak Ada!');
+                        break;
+                }
+            }
+
+              hasil.value = total;
+              if(hasil.value == 'undefined')
+              {
+                  hasil.value = 'NotFond';
+              }else{
+                  hasil.value = total;  
+              }
+        });   
+    </script>
+</body>
+</html>

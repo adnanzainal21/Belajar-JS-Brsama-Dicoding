@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PenggunaanSwitch</title>
+</head>
+    <h4>1. Pizza</h4>
+    <h4>2. Susu</h4>
+    <h4>3. Telur</h4>
+    <input type="submit" value="Pilih Menu" onclick="pilih()">
+<body>
+   <script>
+       function pilih(){
+      var angka = prompt('Masukan Menu Makanan : ');
+      switch (angka){
+          case '1':
+          alert('Tipe : Makanan \n Detail : Tidak Sehat Untuk Tubuh!')
+          break;
+          case '2':
+          alert('Tipe : Minumans \n Detail : Sehat Untuk Tubuh!')
+          break;
+          case '3':
+          alert('Tipe : Makanan \n Detail : Sehat Untuk Tubuh!')
+          break;
+          default:
+          alert('Makanan/Minuman Yang anda Masukan Tidak Terdaptar!');
+      }
+           
+    }
+   </script>
+</body>
+</html>

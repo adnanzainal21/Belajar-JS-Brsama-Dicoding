@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeleScript</title>
+</head>
+<body>
+    <input type="text" id="angka1">
+    <input type="text" id="angka2">
+    <script>
+        // assisgment Operator
+        let satu = parseInt(document.getElementById('angka1').value);
+        let dua = parseInt(document.getElementById('angka2').value);
+        let result = document.querySelector('#angka2');
+        result.addEventListener('keyup', function(){
+            alert(satu += dua);
+        });
+    </script>
+</body>
+</html>

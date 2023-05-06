@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GameKeren</title>
+</head>
+<body>
+<script>
+    var kep = true;
+    while (kep){
+            // menangkap pilihan player
+            var p = prompt('Pilih : gajah, semut, orang');
+            // menangkap pilihan komputer dan membangkitkan bilangan random
+            var comp = Math.random();//math.random tersebut untuk fungsi random nya
+            if( comp < 0.34 ){
+                comp = 'gajah';
+            }else if( comp >= 0.34 && comp < 0.67){
+                comp = 'semut';
+            }else{
+                comp = 'manusia';
+            }
+            //membuat rules
+            var hasil = '';
+            if ( p == comp){
+                hasil = 'SERI!';
+            }else if( p == 'gajah'){
+                hasil = ( comp == 'orang' ) ? 'MENANG' : 'KALAH!';
+            }else if( p == 'orang'){
+                hasil = ( comp == 'gajah') ? 'KALAH!' : 'MENANG';
+            }else if( p == 'semut'){
+                hasil = ( comp == 'orang') ? 'KALAH!' : 'MENANG';
+            }else{
+                hasil = 'Memasukan pilihan yang Salah!';
+            }
+            alert ('Kamu Memilih : ' + p + '\nKomputer Memilih : ' + comp + '\nHasil Nya Kamu : ' + hasil)
+            kep = confirm('Mau Bermain Lagi ? ');
+        }
+        alert('TerimaKasih Sudah Bermain:)');
+</script>
+</body>
+</html>

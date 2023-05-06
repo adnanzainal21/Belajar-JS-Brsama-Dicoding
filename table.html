@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+       <script>
+           var jml = prompt('masukan perulangan');
+           var hasil = 1;
+           while(hasil <= jml){
+               document.write('ini angka ke : ' + hasil + "<br>");
+               hasil++;
+           }
+           function perin(){
+               window.print(hasil);
+           }
+       </script>
+       <input type="submit"  id="print" value="PRINT" onclick="perin()">
+</body>
+</html>
