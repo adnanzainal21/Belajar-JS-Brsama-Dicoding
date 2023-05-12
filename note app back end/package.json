@@ -1,0 +1,19 @@
+{
+  "name": "note-app-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sarver.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2"
+  }
+}
